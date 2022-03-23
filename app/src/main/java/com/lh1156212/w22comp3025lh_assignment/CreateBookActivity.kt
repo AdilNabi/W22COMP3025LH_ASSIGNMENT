@@ -7,7 +7,7 @@ import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 import com.lh1156212.w22comp3025lh_assignment.databinding.ActivityCreateBookBinding
 
-class createBookActivity : AppCompatActivity() {
+class CreateBookActivity : AppCompatActivity() {
     private lateinit var binding : ActivityCreateBookBinding
 
 
