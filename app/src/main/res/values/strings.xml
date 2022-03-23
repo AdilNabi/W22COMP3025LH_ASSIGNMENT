@@ -4,4 +4,8 @@
     <string name="enter_author">Enter Author</string>
     <string name="enter_genre">Enter Genre</string>
     <string name="create_book">Create Book</string>
+    <string name="enter_review_title">Enter Review Title</string>
+    <string name="enter_reviewer_name">Enter Reviewer Name</string>
+    <string name="enter_review">Enter Review</string>
+    <string name="add_review">Add Review</string>
 </resources>

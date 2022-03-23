@@ -1,5 +1,6 @@
 package com.lh1156212.w22comp3025lh_assignment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +12,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.lh1156212.w22comp3025lh_assignment.databinding.ActivityCreateBookBinding
 
-class CreateBookActivity : AppCompatActivity() {
+class CreateBookActivity : AppCompatActivity(), BookAdapter.BookItemListener {
     private lateinit var binding : ActivityCreateBookBinding
     private lateinit var auth: FirebaseAuth
 
@@ -54,9 +55,15 @@ class CreateBookActivity : AppCompatActivity() {
 
         val viewModel : BookViewModel by viewModels()
         viewModel.getBooks().observe(this, { books ->
-            binding.recyclerView.adapter = BookAdapter(this, books)
+            binding.recyclerView.adapter = BookAdapter(this, books, this)
 
         })
 
+    }
+
+    override fun bookSelected(book: Book) {
+        var intent = Intent(this, BookDetailActivity::class.java)
+        intent.putExtra("bookID", book.id)
+        startActivity(intent)
     }
 }

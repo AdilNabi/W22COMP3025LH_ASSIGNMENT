@@ -8,7 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class BookAdapter (val context : Context,
-                   val books : List<Book>
+                   val books : List<Book>,
+                   val itemListener : BookItemListener
                     ): RecyclerView.Adapter<BookAdapter.BookViewHolder>(){
 
 
@@ -42,7 +43,7 @@ class BookAdapter (val context : Context,
             bookTextView.text = book.title
             genreTextView.text = book.genre
             itemView.setOnClickListener {
-//                itemListener.bookSelected(book)
+                itemListener.bookSelected(book)
             }
         }
     }

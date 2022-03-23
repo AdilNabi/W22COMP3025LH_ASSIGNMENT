@@ -13,7 +13,7 @@
         android:id="@+id/bookTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Major Assignment"
+        tools:text="Book Title"
         android:gravity="center_horizontal"
         android:textSize="20sp"
         android:padding="3dp"
@@ -21,13 +21,14 @@
 
     <TextView
         android:id="@+id/genreTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:text="Create a desktop application that can connect with an API and display the information in a chart"
-        android:gravity="center_vertical"
-        android:textSize="12sp"
+        tools:text="Book Genre"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"
         android:paddingStart="3dp"
         android:paddingEnd="3dp"
         android:paddingBottom="3dp"
+        android:textStyle="bold"
         />
 </android.widget.LinearLayout>
