@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "399663834487",
+    "project_id": "w22comp3025lh-assignment-c50a3",
+    "storage_bucket": "w22comp3025lh-assignment-c50a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399663834487:android:9bdec0598762bd8481ed72",
+        "android_client_info": {
+          "package_name": "com.lh1156212.w22comp3025lh_assignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399663834487-dke91btjqdtrksk6tjb8jm34r17jv0d0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCikqS1d0lBorLJm-RWGjxBKi7n2C-qa58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399663834487-dke91btjqdtrksk6tjb8jm34r17jv0d0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
