@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">W22COMP3025LH_ASSIGNMENT</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="enter_author">Enter Author</string>
+    <string name="enter_genre">Enter Genre</string>
+    <string name="create_book">Create Book</string>
 </resources>
