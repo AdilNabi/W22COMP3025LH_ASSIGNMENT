@@ -4,5 +4,7 @@ class Book (
     var title : String? = null,
     var author : String? = null,
     var genre : String? = null,
-    var id : String? = null
+    var id : String? = null,
+    var uID : String? = null,
+    var reviewList : ArrayList<Review>? = null
         )
