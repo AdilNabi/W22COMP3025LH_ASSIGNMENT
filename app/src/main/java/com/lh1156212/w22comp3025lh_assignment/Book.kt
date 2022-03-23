@@ -8,3 +8,18 @@ class Book (
     var uID : String? = null,
     var reviewList : ArrayList<Review>? = null
         )
+
+{
+    override
+    fun toString() : String{
+        if (title != null)
+            return title!!
+        else
+            return "error, undefined."
+    }
+
+
+
+
+
+}

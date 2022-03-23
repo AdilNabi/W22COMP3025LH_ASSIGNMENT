@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.viewModels
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -47,5 +48,15 @@ class CreateBookActivity : AppCompatActivity() {
                 Toast.makeText(this,"No field can be empty.", Toast.LENGTH_SHORT).show()
 
         }
+
+
+
+
+        val viewModel : BookViewModel by viewModels()
+        viewModel.getBooks().observe(this, { books ->
+            binding.recyclerView.adapter = BookAdapter(this, books)
+
+        })
+
     }
 }
