@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.W22COMP3025LH_ASSIGNMENT">
         <activity
+            android:name=".AddReviewActivity"
+            android:exported="false" />
+        <activity
             android:name=".BookDetailActivity"
             android:exported="false" />
         <activity
@@ -23,7 +26,7 @@
         </activity>
         <activity
             android:name=".CreateBookActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
