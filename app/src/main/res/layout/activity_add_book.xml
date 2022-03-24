@@ -4,63 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateBookActivity">
+    tools:context=".AddBookActivity">
 
     <EditText
         android:id="@+id/titleNameEditText"
-        android:layout_marginTop="@dimen/std_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/std_margin"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/enter_title"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        app:layout_constraintTop_toBottomOf="@+id/createBookTextView" />
 
     <EditText
         android:id="@+id/authorEditText"
-        android:layout_marginTop="@dimen/std_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/std_margin"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/enter_author"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleNameEditText" />
 
     <EditText
         android:id="@+id/genreEditText"
-        android:layout_marginTop="@dimen/std_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/std_margin"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/enter_genre"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/authorEditText" />
 
     <Button
         android:id="@+id/createBookButton"
-        android:layout_marginTop="@dimen/std_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/std_margin"
         android:text="@string/create_book"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/genreEditText" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintStart_toStartOf="parent"
+    <TextView
+        android:id="@+id/createBookTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/createBookButton"
-        android:layout_margin="@dimen/std_margin"/>
-
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/create_book" />
 </androidx.constraintlayout.widget.ConstraintLayout>

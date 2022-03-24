@@ -7,7 +7,7 @@
     tools:context=".BookDetailActivity">
 
     <TextView
-        android:id="@+id/bookTextView"
+        android:id="@+id/bookTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/std_margin"
@@ -17,42 +17,27 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Title" />
 
-    <EditText
-        android:id="@+id/reviewTitleEditText"
-        android:layout_marginTop="@dimen/std_margin"
+    <TextView
+        android:id="@+id/bookAuthorTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/enter_review_title"
+        android:layout_marginTop="@dimen/std_margin"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        tools:text="Author"
+        app:layout_constraintTop_toBottomOf="@id/bookTitleTextView"/>
 
-        app:layout_constraintTop_toBottomOf="@id/bookTextView"/>
-
-    <EditText
-        android:id="@+id/reviewerEditText"
-        android:layout_marginTop="@dimen/std_margin"
+    <TextView
+        android:id="@+id/bookGenreTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/enter_reviewer_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/reviewTitleEditText" />
-
-    <EditText
-        android:id="@+id/reviewBodyEditText"
         android:layout_marginTop="@dimen/std_margin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/enter_review"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/reviewerEditText" />
+        app:layout_constraintTop_toBottomOf="@id/bookAuthorTextView"
+        tools:text="Genre" />
 
     <Button
         android:id="@+id/createReviewButton"
@@ -62,17 +47,18 @@
         android:text="@string/add_review"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reviewBodyEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/bookGenreTextView" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/createReviewButton"
-        android:layout_margin="20dp" />
+        android:layout_margin="@dimen/std_margin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

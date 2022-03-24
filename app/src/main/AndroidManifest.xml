@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.W22COMP3025LH_ASSIGNMENT">
         <activity
+            android:name=".AddBookActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddReviewActivity"
             android:exported="false" />
         <activity
@@ -25,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CreateBookActivity"
+            android:name=".BookListActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

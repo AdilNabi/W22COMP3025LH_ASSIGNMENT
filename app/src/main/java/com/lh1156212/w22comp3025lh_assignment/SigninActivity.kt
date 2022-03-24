@@ -40,17 +40,14 @@ class SigninActivity : AppCompatActivity() {
     private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
         val response = result.idpResponse
         if (result.resultCode == RESULT_OK) {
-            // Successfully signed in
+
             val user = FirebaseAuth.getInstance().currentUser
-            val intent = Intent(this, CreateBookActivity::class.java)
+            val intent = Intent(this, BookListActivity::class.java)
             intent.putExtra("user", user)
             startActivity(intent)
-            // ...
+
         } else {
-            // Sign in failed. If response is null the user canceled the
-            // sign-in flow using the back button. Otherwise check
-            // response.getError().getErrorCode() and handle the error.
-            // ...
+
             Toast.makeText(this, "Signin Failed", Toast.LENGTH_LONG).show()
             startActivity(Intent(this, SigninActivity::class.java))
         }
