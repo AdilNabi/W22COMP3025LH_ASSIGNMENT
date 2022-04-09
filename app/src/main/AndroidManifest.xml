@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.W22COMP3025LH_ASSIGNMENT">
         <activity
+            android:name=".testActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddBookActivity"
             android:exported="false" />
         <activity

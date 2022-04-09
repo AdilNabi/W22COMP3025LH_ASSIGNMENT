@@ -19,10 +19,4 @@ class Book (
     }
 
 
-    fun addReview(newReview : Review)
-    {
-        reviewList!!.add(newReview)
-    }
-
-
 }

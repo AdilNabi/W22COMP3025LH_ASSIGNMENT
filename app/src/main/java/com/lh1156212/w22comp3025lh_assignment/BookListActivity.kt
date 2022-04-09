@@ -56,10 +56,10 @@ class BookListActivity : AppCompatActivity(), BookAdapter.BookItemListener {
 
 
         val viewModel : BookViewModel by viewModels()
-        viewModel.getBooks().observe(this, { books ->
+        viewModel.getBooks().observe(this) { books ->
             binding.recyclerView.adapter = BookAdapter(this, books, this)
 
-        })
+        }
 
     }
 
