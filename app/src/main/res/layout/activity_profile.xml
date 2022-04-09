@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookListActivity">
+    tools:context=".ProfileActivity">
 
     <include
         android:id="@+id/mainToolBar"
@@ -15,27 +15,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
-
-    <Button
-        android:id="@+id/addBookButton"
-        android:layout_marginTop="@dimen/std_margin"
+    <TextView
+        android:id="@+id/userNametextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_a_book"
+        android:paddingTop="@dimen/std_margin"
+        tools:text="Name"
+        android:textSize="@dimen/header_font_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainToolBar"/>
+        app:layout_constraintTop_toBottomOf="@+id/mainToolBar" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="tinker@tailor.com"
+        android:paddingTop="@dimen/std_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addBookButton"
-        android:layout_margin="@dimen/std_margin"/>
+        app:layout_constraintTop_toBottomOf="@+id/userNametextView"
 
+        />
+
+    <TextView
+        android:id="@+id/termsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/std_margin"
+        android:text="@string/info"
+app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailTextView"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

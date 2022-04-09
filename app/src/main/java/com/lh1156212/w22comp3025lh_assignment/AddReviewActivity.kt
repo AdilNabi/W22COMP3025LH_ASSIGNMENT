@@ -3,6 +3,8 @@ package com.lh1156212.w22comp3025lh_assignment
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
@@ -63,5 +65,31 @@ class AddReviewActivity : AppCompatActivity() {
 
 
         }
+        setSupportActionBar(binding.mainToolBar.toolbar)
+    }
+
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.action_add_book -> {
+                startActivity(Intent(applicationContext, AddBookActivity::class.java))
+                return true
+            }
+            R.id.action_view_book -> {
+                startActivity(Intent(applicationContext, BookListActivity::class.java))
+                return true
+            }
+            R.id.action_view_account -> {
+                startActivity((Intent(application, ProfileActivity::class.java)))
+                return true
+            }
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

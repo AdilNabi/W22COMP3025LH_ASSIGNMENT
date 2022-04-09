@@ -13,4 +13,8 @@
     <string name="create_book">Create Book</string>
     <string name="title">Title</string>
     <string name="author">Author</string>
+    <string name="add_a_new_book">Add a new Book</string>
+    <string name="view_all_books">View all Books</string>
+    <string name="view_user_profile">View User Profile</string>
+    <string name="info">This is a student project for COMP3025 at Lakehead-Georgian. It was created by Adil Nabi. Please note that this application is purely for learning and educational purposes.</string>
 </resources>

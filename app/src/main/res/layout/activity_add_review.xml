@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".AddReviewActivity">
 
+    <include
+        android:id="@+id/mainToolBar"
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
     <EditText
         android:id="@+id/reviewTitleEditText"
         android:layout_marginTop="40dp"
@@ -51,17 +61,16 @@
         android:layout_marginTop="16dp"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Create Review" />
+        app:layout_constraintTop_toBottomOf="@+id/mainToolBar"
+        android:text="@string/create_review" />
 
     <Button
         android:id="@+id/createReviewButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create_review"
-        android:layout_margin="200dp"
+        android:layout_margin="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reviewBodyEditText" />
