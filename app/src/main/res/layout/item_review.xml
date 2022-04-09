@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/item_selector"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/std_margin"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Title"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:padding="3dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/reviewerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="Author"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:paddingStart="3dp"
+        android:paddingEnd="3dp"
+        android:paddingBottom="3dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/bodyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="Body"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:paddingStart="3dp"
+        android:paddingEnd="3dp"
+        android:paddingBottom="3dp"
+        android:textStyle="bold"
+        />
+</android.widget.LinearLayout>

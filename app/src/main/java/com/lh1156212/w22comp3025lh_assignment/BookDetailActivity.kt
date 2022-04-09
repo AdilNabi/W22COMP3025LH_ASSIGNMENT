@@ -43,19 +43,6 @@ class BookDetailActivity : AppCompatActivity(), ReviewAdapter.ReviewItemListener
                     binding.bookAuthorTextView.text = book.author
                     binding.bookGenreTextView.text = book.genre
 
-//                    binding.linearLayout.removeAllViews()
-//
-//                    for (review in book.reviewList!!)
-//                    {
-//                        var newTitleTextView = TextView(this)
-//                        newTitleTextView.text = "Title: " + review.title + " By: " + review.author
-//                        binding.linearLayout.addView(newTitleTextView)
-//
-//                        var newBodyTextView = TextView(this)
-//                        newBodyTextView.text = review.body + "\n"
-//                        binding.linearLayout.addView(newBodyTextView)
-//
-//                    }
                 }
 
             }
@@ -81,6 +68,15 @@ class BookDetailActivity : AppCompatActivity(), ReviewAdapter.ReviewItemListener
 
         viewModel.getReview().observe(this) { reviews ->
             binding.recyclerView.adapter = ReviewAdapter(this, reviews, this)
+        }
+
+        binding.backButton.setOnClickListener{
+            finish()
+        }
+
+        binding.homeButton.setOnClickListener{
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
 
@@ -115,7 +111,7 @@ class BookDetailActivity : AppCompatActivity(), ReviewAdapter.ReviewItemListener
 
 
     override fun reviewSelected(review: Review) {
-        TODO("Not yet implemented")
+        return Unit
     }
 
 }

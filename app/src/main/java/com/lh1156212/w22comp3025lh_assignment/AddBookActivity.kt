@@ -3,6 +3,7 @@ package com.lh1156212.w22comp3025lh_assignment
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.system.Os.close
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -52,6 +53,17 @@ class AddBookActivity : AppCompatActivity() {
                 Toast.makeText(this,"No field can be empty.", Toast.LENGTH_SHORT).show()
 
         }
+
+
+        binding.backButton.setOnClickListener{
+            finish()
+        }
+
+        binding.homeButton.setOnClickListener{
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
         setSupportActionBar(binding.mainToolBar.toolbar)
     }
 

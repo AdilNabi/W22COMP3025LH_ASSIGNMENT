@@ -42,7 +42,7 @@ class SigninActivity : AppCompatActivity() {
         if (result.resultCode == RESULT_OK) {
 
             val user = FirebaseAuth.getInstance().currentUser
-            val intent = Intent(this, BookListActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("user", user)
             startActivity(intent)
 

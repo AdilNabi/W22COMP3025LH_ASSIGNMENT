@@ -65,6 +65,16 @@ class AddReviewActivity : AppCompatActivity() {
 
 
         }
+
+        binding.backButton.setOnClickListener{
+            finish()
+        }
+
+        binding.homeButton.setOnClickListener{
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
         setSupportActionBar(binding.mainToolBar.toolbar)
     }
 

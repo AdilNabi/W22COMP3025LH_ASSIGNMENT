@@ -18,13 +18,14 @@ class BookAdapter (val context : Context,
 
     inner class BookViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val bookTextView = itemView.findViewById<TextView>(R.id.bookTextView)
+        val authorTextView = itemView.findViewById<TextView>(R.id.authorTextView)
         val genreTextView = itemView.findViewById<TextView>(R.id.genreTextView)
     }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.item_book, parent, false)
+        val view = inflater.inflate(R.layout.item_object, parent, false)
         return BookViewHolder(view)
     }
 
@@ -32,8 +33,12 @@ class BookAdapter (val context : Context,
     override fun onBindViewHolder(viewHolder: BookViewHolder, position: Int) {
         val book = books[position]
         with(viewHolder){
-            bookTextView.text = book.title
-            genreTextView.text = book.genre
+            val title = "Title: " + book.title
+            bookTextView.text =  title
+            val author = "Author: " + book.author
+            authorTextView.text = author
+            val genre = "Genre: " + book.genre
+            genreTextView.text = genre
             itemView.setOnClickListener {
                 itemListener.bookSelected(book)
             }

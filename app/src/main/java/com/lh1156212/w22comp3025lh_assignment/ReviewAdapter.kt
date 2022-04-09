@@ -15,14 +15,15 @@ class ReviewAdapter (val context : Context,
 
 
     inner class ReviewViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-        val titleTextView = itemView.findViewById<TextView>(R.id.bookTextView)
-        val nameTextView = itemView.findViewById<TextView>(R.id.genreTextView)
+        val titleTextView = itemView.findViewById<TextView>(R.id.titleTextView)
+        val authorTextView = itemView.findViewById<TextView>(R.id.reviewerTextView)
+        val bodyTextView = itemView.findViewById<TextView>(R.id.bodyTextView)
     }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReviewViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.item_book, parent, false)
+        val view = inflater.inflate(R.layout.item_review, parent, false)
         return ReviewViewHolder(view)
     }
 
@@ -30,8 +31,12 @@ class ReviewAdapter (val context : Context,
     override fun onBindViewHolder(viewHolder: ReviewViewHolder, position: Int) {
         val review = reviews[position]
         with(viewHolder){
-            titleTextView.text = review.title
-            nameTextView.text = review.author
+            val title = "Title: " + review.title
+            titleTextView.text = title
+            val reviewer = "Reviewer: " + review.author
+            authorTextView.text = reviewer
+            val body = "Body: " + review.body
+            bodyTextView.text = body
             itemView.setOnClickListener {
                 itemListener.reviewSelected(review)
             }
