@@ -1,5 +1,5 @@
 <h1>COMP3025 ASSIGNMENT</h1>
-BY ADIL NABI    1156212
+<h2>BY ADIL NABI    1156212</h2>
 
 
 This application is an assignment for the Course COMP3025 at Lakehead-Georgian
