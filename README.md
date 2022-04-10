@@ -30,4 +30,17 @@ This was done using modelViewFactory in order to make it work.
 
 The application launcher icon was updated with a custom graphic.
 
-Firebase is now fully secure only allowing authenticated users to access it.
+Firebase is now fully secure only allowing authenticated users to access it.!
+
+<h2> Below are Images to show App Publication Progess </h2>
+
+Here it is shown that all pre requisite steps required for the application deployment was complete including the rating questionaire
+and screenshots (screenshots which are submitted and to be shown in app play store are shown here as well) and the only final step remaining was release.
+![Screenshot git1](https://user-images.githubusercontent.com/77406332/162596833-9c8daec4-b4e7-4262-b3b0-779bde55a4fc.png)
+![Screenshot git 2](https://user-images.githubusercontent.com/77406332/162596837-8f1c0215-6587-494b-a51e-5c5cd0c32218.png)
+![Screenshot git 3](https://user-images.githubusercontent.com/77406332/162596914-7c3fbfc3-7a28-4a28-88a9-115fd4ab1249.png)
+
+
+![Screenshot1](https://user-images.githubusercontent.com/77406332/162596853-728c4f06-aa3f-4945-b744-54c5e1789ab5.png)
+![Screenshot2](https://user-images.githubusercontent.com/77406332/162596855-e2bc6c4c-1f24-43b0-b210-ff5f6427201e.png)
+
